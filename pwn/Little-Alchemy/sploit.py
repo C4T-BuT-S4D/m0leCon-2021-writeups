@@ -1,26 +1,16 @@
 #!/usr/bin/env python3
 
-from pwngun_craft import craft
 from pwn import *
 from hashlib import sha256
 
 # SETTINGS
 
-BINARY = "./littleAlchemy"
-
 IP = "challs.m0lecon.it"
 PORT = 2123
 
-LINK_LIBC = False
-LIBC = ""
-LD = ""
-GDBSCRIPT = """
-"""
+context.log_level = "DEBUG"
 
-LOG_LEVEL = "DEBUG"
-
-r, elf, libc = craft(LINK_LIBC, BINARY, LIBC, LD, GDBSCRIPT, IP, PORT, LOG_LEVEL)
-
+r = remote(IP, PORT)
 
 
 r.recvuntil("Give me a string starting with ")
@@ -37,7 +27,6 @@ while True:
     i += 1
 
 r.sendline(s)
-
 
 
 # SPLOIT #
