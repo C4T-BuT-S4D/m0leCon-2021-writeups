@@ -1,4 +1,4 @@
-waffle
+Waffle
 ---
 
 In this challenge we were presented with a Golang HTTP server behind the Flask firewall. 
