@@ -1,7 +1,7 @@
 # Lucky-Fall
 
 ## Writeup
-We are given a simple login form which accepts json with a login and a password. Given it malformed error informing us that it basicly allows overwriting return fields in the query, from there just send it something that will empty salt and password and overwrite the 'hash' with the hash of an empty string.
+We are given a simple login form which accepts json with a login and a password. Given malformed it gives an error informing us that it basicly allows overwriting return fields in the query. From there just send it something with an empty 'salt' and 'password' and the 'hash' with the hash (sha256) of an empty string.
 
 ```python
 In [1]: import requests
