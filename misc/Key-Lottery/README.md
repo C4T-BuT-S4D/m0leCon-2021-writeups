@@ -2,7 +2,7 @@
 
 ## Writeup
 
-We are given a server that asks us to guess a random string of length 32. If supply it a empty list that wouldn't throw an error during parsing before being converted to a set like ',,,', it will print us key_set, that wasn't reasigned yet and that containts the random string we were looking for.
+We are given a server that asks us to guess a random string of length 32. If we supply it a empty list that wouldn't throw an error during parsing before being converted to a set like ',,,', it will print us key_set, that wasn't reasigned to our list yet and containts the random string are were looking for.
 
 ```python
 In [1]: import requests
